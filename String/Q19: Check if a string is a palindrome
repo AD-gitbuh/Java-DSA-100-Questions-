@@ -1,0 +1,28 @@
+import java.util.*;
+class StringPalindromeCheck
+{
+     public static void main(String []args)
+     {
+      Scanner rv = new Scanner(System.in);
+      System.out.println("Enter the word : ");
+      String a =rv.next();
+      
+      String rev="";
+      char ch;
+      String orignal = a;
+      
+      for(int i =0; i<a.length(); i++)
+      {
+        ch = a.charAt(i);
+        rev = ch + rev;
+      }
+      if(rev.equals(orignal))
+      {
+       System.out.println("The String is Palindrome ");
+      }
+      else
+      {
+       System.out.println("The String is not a Palindrome ");
+      }
+     }
+}
