@@ -1,0 +1,21 @@
+import java.util.*;
+class StringReverseUser
+{
+     public static void main(String []args)
+     {
+       Scanner rv = new Scanner(System.in);
+       System.out.println("Enter the word : ");
+       String a = rv.nextLine();
+
+         String rev ="";
+         char ch;
+         
+        for(int i =0; i<a.length(); i++)
+        {
+           ch = a.charAt(i);
+           rev = ch + rev;
+        }
+         System.out.print("Reverse String is : " + rev);
+      }    
+}      
+    
