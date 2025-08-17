@@ -1,0 +1,45 @@
+import java.util.*;
+class FrequencyChar
+{
+     public static void main(String []args)
+     {
+      Scanner rv = new Scanner(System.in);
+      System.out.print("Enter the word : ");
+      String a = rv.next();
+      
+      char ch;
+      String hold = "";
+      int count, found;
+
+      for(int i=0; i<a.length(); i++)
+      { 
+         ch = a.charAt(i);
+             
+        found=0;
+        for(int j=0; j<hold.length(); j++)
+        {
+         if(ch==hold.charAt(j))
+         {
+          found=1;
+          break;
+         }
+        }
+        if(found == 1)
+        {
+          continue;
+        }
+     
+        count=0; 
+        for(int k=0; k<a.length(); k++)
+        {
+         if(ch==a.charAt(k))
+         {
+          count++;
+         }
+        }
+        System.out.println("Frequency of " + ch + " in given word" + " : " + count);
+        hold = hold + ch;
+      }
+     }
+} 
+       
