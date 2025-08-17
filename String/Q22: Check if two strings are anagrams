@@ -1,0 +1,94 @@
+import java.util.*;
+class Anagram
+{
+     public static void main(String []args)
+     {
+      Scanner rv = new Scanner(System.in);
+      System.out.print("Enter the first word : ");
+      String a = rv.nextLine();
+      
+      System.out.print("Enter the Second word : ");
+      String b = rv.nextLine();
+     
+      int i,m,k,count1 = 0, count2 = 0;
+      char ch1, prev;
+      	
+      if(a.length() != b.length())
+      { 
+       System.out.print("It is not Anagram");
+       return;
+      }
+
+      for(i=0; i < a.length(); i++)
+      {
+        ch1 = a.charAt(i);
+       
+       if(ch1 >= 'A' && ch1 <= 'Z')
+       {
+       ch1 = (char)(ch1 + 32);
+       }
+       
+       boolean alreadyChecked = false;
+       for(m = 0; m < i; m++)
+       {
+         prev = a.charAt(m);
+         if(prev >= 'A' && prev <= 'Z')
+         {
+          prev = (char)(prev + 32);
+         }
+
+         if(ch1 == prev)
+         {
+          alreadyChecked = true;
+          break;
+         }
+       }
+
+         if(alreadyChecked)
+         {
+          continue;
+         }
+
+         count1 = 0;
+         for (int j = 0; j < a.length(); j++) 
+         {
+          char ch = a.charAt(j);
+          if (ch >= 'A' && ch <= 'Z') 
+          {
+           ch = (char)(ch + 32);
+          }
+          if (ch == ch1)
+          {
+           count1++;
+          }
+         }
+
+ 	  count2 = 0;
+          for (k = 0; k < b.length(); k++) 
+          {
+           char ch = b.charAt(k);
+                
+           if (ch >= 'A' && ch <= 'Z')
+           {
+            ch = (char)(ch + 32);
+           }
+           if (ch == ch1) {
+           count2++;
+           }
+          }
+
+           if (count1 != count2) 
+           {
+            System.out.println("Not anagram");
+            return;
+            }
+          }
+
+        System.out.println("They are anagrams");
+    }
+}       
+         
+       
+
+
+
