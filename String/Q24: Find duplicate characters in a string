@@ -1,0 +1,45 @@
+import java.util.*;
+class DuplicateCharString
+{
+     public static void main(String []args)
+     {
+      Scanner rv =new Scanner(System.in);
+      System.out.println("Enter the string : ");
+      String a = rv.nextLine();
+
+      char ch ;
+      String duplicates="";
+      
+      for(int i=0; i<a.length(); i++)
+      {
+        ch =a.charAt(i);
+        int count =0;
+
+       for(int j=0; j<a.length(); j++)
+       {
+          if(ch==a.charAt(j))
+          {
+           count++;
+          }
+       }
+   
+       int found =0;
+       for(int k=0; k<duplicates.length(); k++)
+       {
+          if(ch==duplicates.charAt(k))
+          {
+           found=1;
+           break;
+          }
+       }
+
+        if(count > 1 && found ==0)
+        {
+         duplicates +=ch;
+        }
+      }
+      System.out.print("Duplicates are : " + duplicates);
+    }
+}
+
+          
