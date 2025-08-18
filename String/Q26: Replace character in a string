@@ -1,0 +1,34 @@
+import java.util.*;
+class ReplaceCharString
+{
+     public static void main(String []args)
+     {
+      Scanner rv = new Scanner(System.in);
+
+      System.out.print("Enter the String : ");
+      String a = rv.next();
+
+      System.out.print("Enter the replacing character : ");
+      char ch = rv.next().charAt(0);
+      
+      System.out.print("Enter the replacing character position : ");
+      int c = rv.nextInt();
+      
+      int i = 1;
+      String newStr = "";
+
+      while(i<=a.length())
+      {
+       if(i == c)
+       {
+        newStr = newStr + ch;
+       }
+       if(i != c)
+       {
+        newStr = newStr + a.charAt(i-1);
+       }
+       i++;
+      }
+       System.out.print("After replacement String is : " + newStr);
+     }
+}
