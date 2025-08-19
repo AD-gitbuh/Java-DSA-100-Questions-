@@ -1,0 +1,53 @@
+import java.util.*;
+class Pangram
+{
+      public static void main(String []args)
+      {
+       Scanner rv = new Scanner(System.in);
+       System.out.print("Enter the String : ");
+       String a = rv.nextLine();
+ 
+       char ch;
+       String checkedStr ="";
+       int count = 0;
+  
+       for(int i=0; i<a.length(); i++)
+       {
+            ch = a.charAt(i);
+
+         if(ch >= 'A' && ch <='Z')
+         {
+           ch = (char)(ch + 32);
+         }
+  
+         if(ch >= 'a' && ch <='z')
+         {
+          int j;
+          for(j=0; j<checkedStr.length(); j++)
+          { 
+            if(ch == checkedStr.charAt(j))
+            {
+             break;
+            }
+          }
+
+          if(j == checkedStr.length())
+          {
+            checkedStr = checkedStr + ch;
+            count++;
+          }
+         }
+       }
+
+       if (count == 26)
+       {
+        System.out.print("It is a pangram");
+       }
+       else
+       {
+        System.out.print("It is not a pangram");
+       }
+     }
+}
+    
+       
