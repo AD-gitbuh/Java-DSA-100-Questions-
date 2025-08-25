@@ -1,0 +1,27 @@
+class LadderIfElse
+{
+      public static void main(String []args)
+      {
+       int per=76;
+       if(per>=90)
+       {
+             System.out.println("Excellent");
+       }
+       else if(per>=75)
+       {
+             System.out.println("Very good");
+       }
+       else if(per>=60)
+       {
+             System.out.println("good");
+       }
+       else if(per>=45)
+       {
+             System.out.println("average");
+       }
+       else
+       {
+             System.out.println("Need Improvement");
+       }
+     }
+}
